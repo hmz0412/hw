@@ -15,7 +15,7 @@ int main(int argc,char *argv[]){
     if(fd_in<0){
         fprintf(stderr,"open error: %s",argv[1]);
     }
-    fd_out = open(argv[2],O_WRONLY|O_CREAT,0600);
+    fd_out = open(argv[2],O_WRONLY|O_CREAT|O_TRUNC,0600);
     if(fd_out<0){
         fprintf(stderr,"open error: %s",argv[2]);
     }
